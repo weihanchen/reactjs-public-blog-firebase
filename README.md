@@ -1,0 +1,5 @@
+# ReactJS sample demo with blog design #
+
+## Requirement ##
+* [Nodejs](https://nodejs.org/en/) - Backend Framework
+* [NPM](https://www.npmjs.com/) - Package Management

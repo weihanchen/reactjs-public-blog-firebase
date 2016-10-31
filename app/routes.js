@@ -4,17 +4,21 @@ import {
 	Router,
 	Route,
 	IndexRoute,
+	hashHistory,
 	browserHistory
 } from 'react-router'
 
 //import components
 import App from './containers/APP.js'
 import Home from './components/Home/Home.js'
+import Editor from './components/Editor/Editor.js'
 
 const router = (
-	<Router history= {browserHistory}>
-		<Route path='/' component = {App}>
-			<IndexRoute component={Home} />
+	<Router history= {hashHistory}>
+		<Route path='/' component={App}>
+			<Router path='create' component={Editor}></Router>
+			<Router path='home' component={Home}></Router>
+			<IndexRoute  component={Home}></IndexRoute>
 		</Route>
 	</Router>
 )

@@ -1,0 +1,21 @@
+{
+  "name": "reactjs-public-blog-firebase",
+  "description": "reactjs-public-blog-firebase",
+  "main": "public/index.html",
+  "authors": [
+    "will.chen"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,18 +1,24 @@
-# ReactJS sample demo with blog design #
+# ReactJS demo with blog design #
+Simple demo for react and using [firebase](https://firebase.google.com/) to store data.
 
 ## Requirement ##
-* [Nodejs](https://nodejs.org/en/) - Backend Framework
-* [NPM](https://www.npmjs.com/) - Package Management
+* [NPM](https://www.npmjs.com/) - A package manager for build environment
+* [Bower](https://bower.io/) - A package manager for the web
 
 ## File Structure ##
-	|-components
-		|-Header
-		|-body
-			|-overview list
-			|-detail
-			|-editor
-		|-footer
-	|-public
+	app
+	 |-components
+	 	|-Header
+	 	|-Home
+	 |-containers
+	 	|-App.js
+	 |-client.js
+	 |-routers.js
+
+## Run Example ##
+* npm install
+* npm run bower install
+* npm run gulp
 
 ## Development ##
 * npm run dev

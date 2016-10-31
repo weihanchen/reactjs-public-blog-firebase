@@ -1,4 +1,8 @@
-.header-text{
+.header {
+    background: #1d9e74
+}
+
+.header-text {
     color: #ffffff;
     text-shadow: 4px 2px 1px rgba(196, 196, 196, 1);
     margin: 0;

@@ -2,19 +2,23 @@ var path = require('path');
 var webpack = require('webpack');
 
 var ROOT_PATH = path.resolve(__dirname);
-var APP_PATH = path.resolve(__dirname, './components/index.js');
+var APP_PATH = path.resolve(__dirname, './app/client.js');
 var BUILD_PATH = path.resolve(__dirname, './public');
 
 module.exports = {
-    entry: APP_PATH,
-    output: {
-        path: BUILD_PATH,
-        filename: 'bundle.js'
-    },
-    module: {
-        loaders: [{
-            test: /\.jsx?$/,
-            loaders: ['babel-loader?presets[]=es2015,presets[]=react']
-        }]
-    }
+	entry: APP_PATH,
+	output: {
+		path: BUILD_PATH,
+		filename: 'bundle.js'
+	},
+	module: {
+		loaders: [{
+			test: /\.js[x]?$/,
+			exclude: /node_modules/,
+			loaders: ['babel-loader?presets[]=es2015,presets[]=react']
+		}, {
+			test: /\.css$/,
+			loader: "style-loader!css-loader?modules"
+		}]
+	}
 }

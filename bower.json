@@ -9,7 +9,8 @@
   "homepage": "",
   "private": true,
   "dependencies": {
-    "bootstrap": "^3.3.6"
+    "bootstrap": "^3.3.6",
+    "font-awesome": "^4.7.0"
   },
   "ignore": [
     "**/.*",

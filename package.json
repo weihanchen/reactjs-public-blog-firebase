@@ -8,6 +8,7 @@
     "dependencies": {
         "bower": "^1.7.9",
         "css-loader": "^0.25.0",
+        "firebase": "^3.5.2",
         "gulp": "^3.9.1",
         "gulp-clean": "^0.3.2",
         "history": "^4.3.0",

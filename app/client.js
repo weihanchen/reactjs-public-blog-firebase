@@ -3,11 +3,18 @@ import {
 	render
 } from 'react-dom'
 
-// import router
-import router from './routes.js'
+import {
+	Provider
+} from 'react-redux';
 
 
+import Router from './routes.js'
+import configureStore from './store/configureStore';
+
+const store = configureStore();
 render(
-	router,
+	<Provider store={store}>
+		<Router></Router>
+	</Provider>,
 	document.getElementById('root')
 )

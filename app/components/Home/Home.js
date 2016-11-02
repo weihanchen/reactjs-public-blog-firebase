@@ -11,11 +11,11 @@ class Home extends React.Component {
 				<span className="input-group-addon">
 					<i className="fa fa-search fa fw"></i>
 				</span>
-				<input type="text" className="form-control" styleName="textbox-radius" placeholder="Search title..."/>
+		<input type="text" className="form-control" styleName="textbox-radius" placeholder="Search title..."/>
 			</div>
 			</div>
 		)
 	}
 }
 
-export default Home
+export default CSSModules(Home, styles)

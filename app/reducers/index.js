@@ -8,11 +8,9 @@ import {
 import {
 	reducer as awaitReducer
 } from 'redux-await';
-import await from './await';
+// import await from './await';
 
 export default combineReducers({
-	auth,
 	posts,
-	form: formReducer,
-	await
+	form: formReducer
 })

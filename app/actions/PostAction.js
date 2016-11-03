@@ -1,7 +1,7 @@
 import {
 	AWAIT_MARKER
 } from 'redux-await';
-import PostApi from '../../api/post/index';
+import PostApi from '../api/post/index.js';
 
 export const POST_LISTS = 'posts lists';
 

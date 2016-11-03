@@ -1,2 +1,7 @@
-import Firebase from 'firebase';
-export default new Firebase('https://willapp.firebaseio.com');
+import * as Firebase from 'firebase';
+
+const firebaseConfig = {
+	databaseURL: 'https://willapp.firebaseio.com'
+}
+Firebase.initializeApp(firebaseConfig);
+export default Firebase.database().ref();

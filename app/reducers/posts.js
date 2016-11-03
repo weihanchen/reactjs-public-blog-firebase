@@ -10,7 +10,7 @@ import {
 const getInitialState = () => {
 	return {
 		lists: [],
-		currentItems: postsList.perPage, //pagination
+		// currentItems: postsList.perPage, //pagination
 		currentPost: {
 			user: {}
 		}

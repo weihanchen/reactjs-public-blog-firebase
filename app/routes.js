@@ -9,7 +9,7 @@ import {
 } from 'react-router'
 
 //import components
-import App from './containers/APP.js'
+import App from './components/App/APP.js'
 import Home from './components/Home/Home.js'
 import Editor from './components/Editor/Editor.js'
 

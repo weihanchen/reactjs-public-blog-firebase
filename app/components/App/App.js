@@ -3,8 +3,8 @@ import {
 	connect
 } from 'react-redux';
 //import components
-import Header from '../Header/Header.js'
-import Body from '../Body/Body.js'
+import Header from '../Header'
+import Body from '../Body'
 
 class App extends React.Component {
 	constructor(props) {

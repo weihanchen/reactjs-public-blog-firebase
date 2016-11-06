@@ -3,7 +3,7 @@ import {
 	Link
 } from 'react-router'
 import CSSModules from 'react-css-modules'
-import styles from './Header.css'
+import styles from './styles.css'
 
 class Header extends React.Component {
 	render() {

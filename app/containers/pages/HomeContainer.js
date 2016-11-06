@@ -18,7 +18,7 @@ import {
 import {
     PostsList
 } from '../../components/Posts/index'
-import SearchBar from '../../components/SearchBar/SearchBar'
+import SearchBar from '../../components/SearchBar'
 
 
 class HomeContainer extends React.Component {

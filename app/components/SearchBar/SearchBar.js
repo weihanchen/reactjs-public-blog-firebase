@@ -1,8 +1,10 @@
-import React,{Component} from 'react'
+import React, {
+	Component
+} from 'react'
 import CSSModules from 'react-css-modules'
-import styles from './SearchBar.css'
+import styles from './styles.css'
 
-class SearchBar extends React.Component {
+class SearchBar extends Component {
 	render() {
 		return (
 			<div>

@@ -4,6 +4,7 @@ import React, {
 } from 'react';
 
 import PostItem from './PostItem';
+import Spinner from '../Spinner'
 
 class PostsList extends Component {
 	shouldComponentUpdate(nextProps) {
@@ -16,7 +17,7 @@ class PostsList extends Component {
 		} = this.props
 		let renderStatus = {
 			loading: function() {
-				return <div>loading</div>
+				return <Spinner />
 			},
 			success: function() {
 				const postsNode = posts.data.map(post => //use key avoid Each child in an array or iterator should have a unique "key" prop

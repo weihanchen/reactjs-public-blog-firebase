@@ -1,5 +1,5 @@
-import PostsList from './PostsList';
-import PostItem from './PostItem';
+import PostsList from './PostsList'
+import PostItem from './PostItem'
 
 export default {
 	PostsList,

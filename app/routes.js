@@ -8,7 +8,7 @@ import {
 } from 'react-router'
 
 //import components
-import App from './components/App/App.js'
+import App from './components/App'
 import {
 	HomeContainer
 } from './containers/pages'

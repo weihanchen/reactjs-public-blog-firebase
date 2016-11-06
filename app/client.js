@@ -2,27 +2,25 @@ import React from 'react'
 import {
 	render
 } from 'react-dom'
-
+import {
+	Router,
+	browserHistory
+} from 'react-router';
 import {
 	Provider
 } from 'react-redux';
 
 
-import Router from './routes.js'
-import configureStore from './store/configureStore';
+import routes from './routes.js'
+import store from './store/configureStore';
 
-class Root extends Comment {
-	render() {
-		return (
-			<Provider store={store}>
-				<Router></Router>
-			</Provider>
-		)
-	}
-}
 
-const store = configureStore();
+
 render(
-	Root,
+	<div>
+		<Provider store={store}>
+			<Router children={routes} history={browserHistory} />
+		</Provider>
+	</div>,
 	document.getElementById('root')
 )

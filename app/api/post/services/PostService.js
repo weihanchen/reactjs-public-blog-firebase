@@ -1,7 +1,7 @@
 import firebase from '../../Firebase'
 import {
-	mergeArrayObjectWithKey
-} from '../../../utils/firebaseUtils'
+	converterUtils
+} from '../../../utils'
 
 class postService {
 	getPostsList() {
@@ -9,7 +9,10 @@ class postService {
 		let promise = new Promise((resolve, reject) => {
 			try {
 				postsFirebase.on('value', function(snapshot) {
-					let posts = mergeArrayObjectWithKey(snapshot.val())
+					let posts = converterUtils.mergeArrayObjectWithKey(snapshot.val().datas)
+					posts.sort((pre, curr) => {
+						return new Date(curr.postDate) - new Date(pre.postDate)
+					})
 					resolve(posts)
 				})
 			} catch (err) {

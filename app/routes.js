@@ -1,7 +1,6 @@
 import React from 'react'
 import {
 	Redirect,
-	Router,
 	Route,
 	IndexRoute,
 	hashHistory,
@@ -9,18 +8,17 @@ import {
 } from 'react-router'
 
 //import components
-import App from './components/App/APP.js'
-import Home from './components/Home/Home.js'
+import App from './components/App/App.js'
+import {
+	HomeContainer
+} from './containers/pages'
 import Editor from './components/Editor/Editor.js'
-
-const router = (
-	<Router history= {hashHistory}>
-		<Route path='/' component={App}>
-			<Router path='create' component={Editor}></Router>
-			<Router path='home' component={Home}></Router>
-			<IndexRoute  component={Home}></IndexRoute>
-		</Route>
-	</Router>
+const Routes = (
+	<Route path='/' component={App}>
+		<IndexRoute  component={HomeContainer} />
+		<Route path='create' component={Editor}></Route>
+		<Route path='home' component={HomeContainer}></Route>
+	</Route>
 )
 
-export default router
+export default Routes

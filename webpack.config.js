@@ -6,7 +6,9 @@ var APP_PATH = path.resolve(__dirname, './app/client.js');
 var BUILD_PATH = path.resolve(__dirname, './public');
 
 module.exports = {
-	entry: APP_PATH,
+	entry: {
+		main: ['babel-polyfill', APP_PATH]
+	},
 	output: {
 		path: BUILD_PATH,
 		filename: 'bundle.js'

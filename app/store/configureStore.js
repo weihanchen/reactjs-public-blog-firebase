@@ -1,21 +1,13 @@
 import {
 	createStore,
-	applyMiddleware,
-	compose
-} from 'redux';
-import thunkMiddleware from 'redux-thunk';
-import {
-	middleware as awaitMiddleware
-} from 'redux-await';
-import rootReducers from '../reducers/index';
+	applyMiddleware
+} from 'redux'
+import createSagaMiddleware from 'redux-saga'
+import rootReducers from '../reducers/index'
+import rootSaga from '../sagas'
 
-export default function configureStore(initialState) {
-	return createStore(
-		rootReducers,
-		initialState,
-		compose(
-			applyMiddleware(thunkMiddleware, awaitMiddleware),
-			window.devToolsExtension ? window.devToolsExtension() : f => f
-		)
-	)
-}
+const sagaMiddleware = createSagaMiddleware()
+const store = createStore(rootReducers, applyMiddleware(sagaMiddleware))
+
+sagaMiddleware.run(rootSaga)
+export default store

@@ -11,7 +11,7 @@ import {
 	REQUEST_FETCH_POSTS,
 	FAIL_TO_FETCH_POSTS,
 	SUCCESS_FETCH_POSTS
-} from '../actions/fetchPosts'
+} from '../actions'
 
 import PostApi from '../api/post/index';
 

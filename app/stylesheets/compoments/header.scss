@@ -1,0 +1,10 @@
+.header {
+    background: $color-navy;
+    &-text {
+	    color: $color-white;
+	    text-shadow: 4px 2px $text-shadow-gray;
+	    margin: 0;
+	    padding: 1em;
+	}
+}
+

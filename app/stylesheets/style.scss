@@ -1,0 +1,12 @@
+@import "./variables";
+@import "./mixins";
+/* compoments */
+@import "./compoments/header";
+@import "./compoments/searchBar";
+
+.container-border {
+    margin-top: 1em;
+    padding: 0.5em;
+    @include box-shadow-light-green(1px,-1px,5px,5px);
+  
+}

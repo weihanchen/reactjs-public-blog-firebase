@@ -1,12 +1,14 @@
 import {
 	REQUEST_FETCH_POSTS,
 	FAIL_TO_FETCH_POSTS,
-	SUCCESS_FETCH_POSTS
-} from '../actions/fetchPosts';
+	SUCCESS_FETCH_POSTS,
+	FILTER_POSTS
+} from '../actions';
 export default function posts(state = {
-	status: 'init',
-	data: [],
-	error: null
+	error: null,
+	filterTitle: '',
+	list: [],
+	status: 'init'
 }, action) {
 	switch (action.type) {
 		case REQUEST_FETCH_POSTS:
@@ -24,9 +26,14 @@ export default function posts(state = {
 		case SUCCESS_FETCH_POSTS:
 			return Object.assign({}, state, {
 				status: 'success',
-				data: action.posts
+				list: action.posts
 			})
 			break
+		case FILTER_POSTS:
+			return Object.assign({}, state, {
+				status: 'success',
+				filterTitle: action.filterTitle
+			})
 		default:
 			return state
 	}

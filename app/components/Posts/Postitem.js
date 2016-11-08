@@ -2,8 +2,7 @@ import React, {
 	Component,
 	PropTypes
 } from 'react'
-import CSSModules from 'react-css-modules'
-import styles from './styles.css'
+
 import {
 	Link
 } from 'react-router'
@@ -14,7 +13,7 @@ class PostItem extends Component {
 	render() {
 		let post = this.props.post;
 		return (
-			<div styleName='container-border'>
+			<div className='container-border'>
 				<i>{converterUtils.toDatetime(post.postDate)}</i>
 				<hr />
 				<h3>
@@ -27,7 +26,7 @@ class PostItem extends Component {
 	}
 }
 
-export default CSSModules(PostItem, styles)
+export default PostItem
 
 PostItem.propTypes = {
 	post: PropTypes.object

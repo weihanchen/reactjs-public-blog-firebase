@@ -9,7 +9,8 @@ import Spinner from '../Spinner'
 class PostsList extends Component {
 	shouldComponentUpdate(nextProps) {
 		return (nextProps.posts.status !== this.props.posts.status) ||
-			(nextProps.posts.data[0] !== this.props.posts.data[0])
+			(nextProps.posts.list[0] !== this.props.posts.list[0]) ||
+			(nextProps.posts.filterTitle != this.props.filterTitle)
 	}
 	render() {
 		const {
@@ -20,9 +21,12 @@ class PostsList extends Component {
 				return <Spinner />
 			},
 			success: function() {
-				const postsNode = posts.data.map(post => //use key avoid Each child in an array or iterator should have a unique "key" prop
-					<PostItem key={post.key} post={post}></PostItem>
-				)
+				const filterTitle = posts.filterTitle.toLowerCase()
+				const postsNode = posts.list.map(post => { //use key avoid Each child in an array or iterator should have a unique "key" prop
+					if (post.title.toLowerCase().includes(filterTitle)) {
+						return <PostItem key={post.key} post={post}></PostItem>
+					}
+				})
 				return (
 					<div>
 						{postsNode}
@@ -33,9 +37,10 @@ class PostsList extends Component {
 		if (renderStatus.hasOwnProperty(posts.status)) return renderStatus[posts.status]()
 		return <div></div>
 	}
-
 }
 
-
+PostsList.propTypes = {
+	posts: PropTypes.object
+}
 
 export default PostsList

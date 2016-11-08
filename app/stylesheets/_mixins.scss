@@ -1,0 +1,11 @@
+@mixin box-shadow-light-green($h-shadow, $v-shadow, $blur, $spread) {
+    -webkit-box-shadow: $h-shadow $v-shadow $blur $spread rgba(209, 240, 216, 1);
+    -moz-box-shadow: $h-shadow $v-shadow $blur $spread rgba(209, 240, 216, 1);
+    box-shadow: $h-shadow $v-shadow $blur $spread rgba(209, 240, 216, 1);
+}
+
+@mixin border-radius($size) {
+    -webkit-border-radius: $size;
+    -moz-border-radius: $size;
+    border-radius: $size;
+}

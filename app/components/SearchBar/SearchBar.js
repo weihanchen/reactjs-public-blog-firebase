@@ -1,11 +1,15 @@
 import React, {
-	Component
+	Component,
+	PropTypes
 } from 'react'
-import CSSModules from 'react-css-modules'
-import styles from './styles.css'
+
 
 class SearchBar extends Component {
+
 	render() {
+		const {
+			handleUpdateSearch
+		} = this.props
 		return (
 			<div>
 				<p></p>
@@ -13,11 +17,19 @@ class SearchBar extends Component {
 					<span className="input-group-addon">
 						<i className="fa fa-search fa fw"></i>
 					</span>
-					<input type="text" className="form-control" styleName="textbox-radius" placeholder="Search title..."/>
+					<input type="text" 
+						   className="form-control textbox-radius" 
+						   placeholder="Search title..."
+						   onChange={(e) => handleUpdateSearch(e.target.value)}
+						   />
 				</div>
 			</div>
 		)
 	}
 }
 
-export default CSSModules(SearchBar, styles)
+SearchBar.propTypes = {
+	handleUpdateSearch: PropTypes.func
+}
+
+export default SearchBar

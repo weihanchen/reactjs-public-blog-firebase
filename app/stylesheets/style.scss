@@ -1,12 +1,18 @@
 @import "./variables";
 @import "./mixins";
 /* compoments */
-@import "./compoments/header";
-@import "./compoments/searchBar";
+@import "./components/header";
+@import "./components/searchBar";
+@import "./components/errorContent";
 
 .container-border {
     margin-top: 1em;
     padding: 0.5em;
     @include box-shadow-light-green(1px,-1px,5px,5px);
   
+}
+
+.footer-text {
+	margin-top: 1em;
+	margin-bottom: 1em;
 }

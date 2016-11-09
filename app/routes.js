@@ -18,7 +18,7 @@ const Routes = (
 	<Route path='/' component={App}>
 		<IndexRoute  component={HomeContainer} />
 		<Route path='/create' component={Editor}></Route>
-		<Route path="/detail" component={DetailContainer}></Route>
+		<Route path="/detail/:id" component={DetailContainer}></Route>
 		<Route path='/home' component={HomeContainer}></Route>
 	</Route>
 )

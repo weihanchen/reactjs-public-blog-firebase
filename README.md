@@ -1,6 +1,9 @@
 # ReactJS demo with blog CRUD #
 Get start with react application
 
+## Demo ##
+Pending...
+
 ## Requirement ##
 * [Nodejs](https://nodejs.org/en/)
 * [NPM](https://www.npmjs.com/) - A package manager for build environment
@@ -18,8 +21,9 @@ Get start with react application
 >3. [Redux Saga](https://github.com/yelouafi/redux-saga)
 >4. [React Router](https://github.com/ReactTraining/react-router)
 >5. [Firebase](https://firebase.google.com/) - database to store data
->6. [Bootstrap](http://getbootstrap.com/)
->7. [Fontawesome](http://fontawesome.io/)
+>6. [SASS、SCSS](http://sass-lang.com/)
+>7. [Bootstrap](http://getbootstrap.com/)
+>8. [Fontawesome](http://fontawesome.io/)
 
 ## File Structure ##
 	app - reactjs source code
@@ -32,15 +36,15 @@ Get start with react application
 	 	|-Header
 	 	|-Posts
 	 	|-SearchBar
-	 |-constants - action types
+	 	|-Spinner
 	 |-containers - connect with redux's store
 	 	|-pages
 	 		|-HomeContainer.js
 	 		|-index.js
 	 |-reducers
-	 |-sagas - middleware
+	 |-sagas - middleware to process async actions
 	 |-store
-	 |-utils - view converter
+	 |-utils
 	 |-client.js
 	 |-routers.js
 	public - running application folder

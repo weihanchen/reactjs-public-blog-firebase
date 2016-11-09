@@ -35,7 +35,7 @@
     "scripts": {
         "bower": "bower",
         "build": "webpack",
-        "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base public",
+        "dev": "webpack-dev-server --inline --devtool eval --progress --colors --hot --content-base public",
         "gulp": "gulp"
     }
 }

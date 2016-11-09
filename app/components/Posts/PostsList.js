@@ -5,6 +5,7 @@ import React, {
 
 import PostItem from './PostItem';
 import Spinner from '../Spinner'
+import ErrorContent from '../ErrorContent'
 
 class PostsList extends Component {
 	shouldComponentUpdate(nextProps) {
@@ -16,6 +17,7 @@ class PostsList extends Component {
 		const {
 			posts
 		} = this.props
+
 		let renderStatus = {
 			loading: function() {
 				return <Spinner />
@@ -32,6 +34,9 @@ class PostsList extends Component {
 						{postsNode}
 					</div>
 				)
+			},
+			error: function() {
+				return <ErrorContent message={posts.error}/>
 			}
 		}
 		if (renderStatus.hasOwnProperty(posts.status)) return renderStatus[posts.status]()

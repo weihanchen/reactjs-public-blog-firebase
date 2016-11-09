@@ -17,7 +17,7 @@ class PostItem extends Component {
 				<i>{converterUtils.toDatetime(post.postDate)}</i>
 				<hr />
 				<h3>
-					<Link to={`/detail`}>
+					<Link to={`/detail/${post.key}`}>
 	           			{post.title}
 	            	</Link>	
 				</h3>

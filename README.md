@@ -1,7 +1,7 @@
 # ReactJS demo with blog CRUD #
 Get start with react CRUD application
 
-## [Live Demo](https://weihanchen.github.io/reactjs-public-blog-firebase/public) ##
+## <a href="https://weihanchen.github.io/reactjs-public-blog-firebase/public" target="_blank">Live Demo</a> ##
 
 
 ## Requirement ##

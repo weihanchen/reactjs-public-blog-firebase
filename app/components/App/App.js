@@ -5,6 +5,7 @@ import {
 //import components
 import Header from '../Header'
 import Body from '../Body'
+import Footer from '../Footer'
 
 class App extends React.Component {
 	constructor(props) {
@@ -13,8 +14,9 @@ class App extends React.Component {
 	render() {
 		return (
 			<div>
-				<Header></Header>
+				<Header />
 				<Body children={this.props.children} {...this.props}></Body>
+				<Footer />
 			</div>
 		)
 	}

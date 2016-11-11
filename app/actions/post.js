@@ -9,7 +9,6 @@ export function failToFetchPost(errors) {
 }
 
 export function requestFetchPost(id) {
-	console.log(id)
 	return {
 		type: REQUEST_FETCH_POST,
 		id

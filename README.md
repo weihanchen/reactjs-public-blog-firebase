@@ -1,8 +1,8 @@
 # ReactJS demo with blog CRUD #
-Get start with react application
+Get start with react CRUD application
 
-## Demo ##
-Pending...
+## [Demo](https://weihanchen.github.io/reactjs-public-blog-firebase/public) ##
+
 
 ## Requirement ##
 * [Nodejs](https://nodejs.org/en/)
@@ -14,6 +14,7 @@ Pending...
 * npm install
 * npm run dev - development
 * npm run build - build to public/bundle.js
+* node run.js - run with express
 
 ## Stack ##
 >1. [React](https://facebook.github.io/react/)
@@ -40,17 +41,22 @@ Pending...
 	 	|-Posts
 	 	|-SearchBar
 	 	|-Spinner
-	 |-containers - connect with redux's store
+	 |-containers - connect with redux's store and dispatch actions
 	 	|-pages
 	 		|-HomeContainer.js
 	 		|-index.js
 	 |-reducers
 	 |-sagas - middleware to process async actions
 	 |-store
+	 |-stylesheets - scss files
 	 |-utils
 	 |-client.js
 	 |-routers.js
 	public - running application folder
 
-Todo...
+## Components ##
 
+![App](./images/Components.png)
+
+## Data Flow ##
+Todo...

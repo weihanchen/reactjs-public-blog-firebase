@@ -11,7 +11,7 @@ module.exports = {
 	},
 	output: {
 		path: BUILD_PATH,
-		filename: 'bundle.js'
+		filename: 'bundle.min.js'
 	},
 	module: {
 		loaders: [{
@@ -46,5 +46,15 @@ module.exports = {
 			test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
 			loader: "url-loader?limit=10000&mimetype=image/svg+xml"
 		}]
-	}
+	},
+	plugins: [
+		new webpack.optimize.UglifyJsPlugin({
+			minimize: true
+		}),
+		new webpack.DefinePlugin({
+			"process.env": {
+				NODE_ENV: JSON.stringify("production")
+			}
+		})
+	]
 }

@@ -21,7 +21,6 @@ class DetailContent extends Component {
 				return <Spinner />
 			},
 			success: function() {
-				console.log(post)
 				return (
 					<div>
 						

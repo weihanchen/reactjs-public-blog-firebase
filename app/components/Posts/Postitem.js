@@ -14,7 +14,7 @@ class PostItem extends Component {
 		let post = this.props.post;
 		return (
 			<div className='container-border'>
-				<i>{converterUtils.toDatetime(post.postDate)}</i>
+				<i className="fa fa-calendar-o"><i> {converterUtils.toDatetime(post.postDate)}</i></i>
 				<hr />
 				<h3>
 					<Link to={`/detail/${post.key}`}>

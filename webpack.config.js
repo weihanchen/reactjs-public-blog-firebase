@@ -19,6 +19,9 @@ module.exports = {
 			exclude: /(node_modules|bower_components)/,
 			loaders: ['babel-loader?presets[]=es2015,presets[]=react']
 		}, {
+			test: /\.json$/,
+			loader: 'json'
+		}, {
 			test: /\.css$/,
 			loader: 'style-loader!css-loader'
 		}, {

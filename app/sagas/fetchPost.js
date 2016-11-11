@@ -22,7 +22,6 @@ export function* watchRequestFetchPost() {
 export function* fetchPostFlow(action) {
 	try {
 		const post = yield call(PostApi.getPost, action.id)
-		console.log(post)
 		yield put({
 			type: SUCCESS_FETCH_POST,
 			post

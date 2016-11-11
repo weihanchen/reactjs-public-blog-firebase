@@ -25,6 +25,9 @@ Pending...
 >7. [Bootstrap](http://getbootstrap.com/)
 >8. [Fontawesome](http://fontawesome.io/)
 
+## Dependencies ##
+>1.[react-html-parser](https://github.com/wrakky/react-html-parser)
+
 ## File Structure ##
 	app - reactjs source code
 	 |-actions

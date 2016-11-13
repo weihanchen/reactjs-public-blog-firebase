@@ -26,7 +26,7 @@ class PostsList extends Component {
 				const filterTitle = posts.filterTitle.toLowerCase()
 				const postsNode = posts.list.map(post => { //use key avoid Each child in an array or iterator should have a unique "key" prop
 					if (post.title.toLowerCase().includes(filterTitle)) {
-						return <PostItem key={post.key} post={post}></PostItem>
+						return <PostItem key={post.key} id={post.key} title={post.title} postDate={post.postDate}></PostItem>
 					}
 				})
 				return (

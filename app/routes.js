@@ -10,14 +10,16 @@ import {
 //import components
 import App from './components/App'
 import {
+	CreateContainer,
 	DetailContainer,
+	EditContainer,
 	HomeContainer
 } from './containers/pages'
-import Editor from './components/Editor/Editor.js'
 const Routes = (
 	<Route path='/' component={App}>
 		<IndexRoute  component={HomeContainer} />
-		<Route path='/create' component={Editor}></Route>
+		<Route path='/create' component={CreateContainer}></Route>
+		<Route path='/edit/:id' component={EditContainer}></Route>
 		<Route path="/detail/:id" component={DetailContainer}></Route>
 		<Route path='/home' component={HomeContainer}></Route>
 	</Route>

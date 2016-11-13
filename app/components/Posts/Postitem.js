@@ -11,14 +11,18 @@ import {
 } from '../../utils'
 class PostItem extends Component {
 	render() {
-		let post = this.props.post;
+		let {
+			id,
+			title,
+			postDate
+		} = this.props;
 		return (
 			<div className='container-border'>
-				<i className="fa fa-calendar-o"><i> {converterUtils.toDatetime(post.postDate)}</i></i>
+				<i className="fa fa-calendar-o"><i> {converterUtils.toDatetime(postDate)}</i></i>
 				<hr />
 				<h3>
-					<Link to={`/detail/${post.key}`}>
-	           			{post.title}
+					<Link to={`/detail/${id}`}>
+	           			{title}
 	            	</Link>	
 				</h3>
 			</div>
@@ -29,5 +33,7 @@ class PostItem extends Component {
 export default PostItem
 
 PostItem.propTypes = {
-	post: PropTypes.object
+	id: PropTypes.string,
+	title: PropTypes.string,
+	postDate: PropTypes.string
 }

@@ -6,7 +6,7 @@ class Body extends React.Component {
 	}
 	render() {
 		return (
-			<div className='row-fluid'>
+			<div className='row body-block '>
 				<div className="col-md-8 col-md-offset-2">
 					 {this.props.children}
 				</div>

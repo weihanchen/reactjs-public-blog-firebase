@@ -1,13 +1,20 @@
 import {
 	watchRequestFetchPosts
 } from './fetchPostsList'
+
 import {
-	watchRequestFetchPost
-} from './fetchPost'
+	watchRequestCreatePost,
+	watchRequestDeletePost,
+	watchRequestFetchPost,
+	watchRequestUpdatePost
+} from './post'
 
 export default function* rootSaga() {
 	yield [
+		watchRequestCreatePost(),
+		watchRequestDeletePost(),
 		watchRequestFetchPosts(),
-		watchRequestFetchPost()
+		watchRequestFetchPost(),
+		watchRequestUpdatePost()
 	]
 }

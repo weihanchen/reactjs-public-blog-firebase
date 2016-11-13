@@ -5,35 +5,32 @@ import React, {
 import {
 	converterUtils
 } from '../../utils'
-
+import ReactHtmlParser from 'react-html-parser';
 import Spinner from '../Spinner'
 import ErrorContent from '../ErrorContent'
-import ReactHtmlParser from 'react-html-parser';
+
 
 class DetailContent extends Component {
 	render() {
 		const {
 			post
 		} = this.props
-
 		let renderStatus = {
 			loading: function() {
 				return <Spinner />
 			},
-			success: function() {
+			fetch_success: function() {
 				return (
 					<div>
-						
-						<h3 className="text-info">{post.data.title}</h3>
+						<h3 className="text-info">{post.title}</h3>
 						<label className="label label-success">
-							<i className="fa fa-calendar"></i> {converterUtils.toDatetime(post.data.postDate)}
+							<i className="fa fa-calendar"></i> {converterUtils.toDatetime(post.postDate)}
 						</label>
 						<p></p>
 						<div>
-							{ReactHtmlParser(post.data.content)}
+							{ReactHtmlParser(post.content)}
 						</div>
 						<p></p>
-						
 					</div>
 				)
 			},

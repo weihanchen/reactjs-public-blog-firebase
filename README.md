@@ -1,5 +1,5 @@
 # ReactJS demo with blog CRUD #
-Get start with react CRUD application
+學習Reactjs過程中的目錄結構、技術堆棧，並記錄相關流程、步驟、遇到的問題，以備下一個專案基礎沿用
 
 ## <a href="https://weihanchen.github.io/reactjs-public-blog-firebase/public" target="_blank">Live Demo</a> ##
 

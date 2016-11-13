@@ -1,6 +1,6 @@
 # ReactJS demo with blog CRUD #
 
-以Create、Read、Update、Delete的流程搭配Firebase來實作Reactjs過程中的目錄結構、非同步處理，並記錄相關流程、步驟、遇到的問題，以供基礎專案參考
+以Create、Read、Update、Delete的流程搭配Firebas並使用Reactjs來實作，記錄過程中的目錄結構、非同步處理、相關流程、步驟、遇到的問題，以供基礎專案參考
 
 ## <a href="https://weihanchen.github.io/reactjs-public-blog-firebase/public" target="_blank">Live Demo</a> ##
 

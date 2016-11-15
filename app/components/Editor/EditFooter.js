@@ -34,9 +34,12 @@ class EditFooter extends Component {
 	}
 
 	render() {
+		const {
+			actionEnabled
+		} = this.props
 		return (
 			<div>
-				<button className="btn btn-success" onClick={this.onUpdateClicked.bind(this)}>
+				<button className="btn btn-success" disabled={!actionEnabled} onClick={this.onUpdateClicked.bind(this)}>
 					<i className="fa fa-check"></i> {this.state.checkText}
 				</button>
 				<span className="gap"></span>
@@ -49,6 +52,7 @@ class EditFooter extends Component {
 }
 
 EditFooter.propTypes = {
+	actionEnabled: PropTypes.boolean,
 	handleCreatePost: PropTypes.func,
 	handleUpdatePost: PropTypes.func
 }

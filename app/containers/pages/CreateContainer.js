@@ -30,7 +30,7 @@ import {
 	requestFetchPost
 } from '../../actions'
 
-class EditContainer extends Component {
+class CreateContainer extends Component {
 
 	constructor(props) {
 		super(props)
@@ -47,6 +47,7 @@ class EditContainer extends Component {
 	}
 
 	handleCreatePost() {
+		console.log(this.state)
 		this.props.requestCreatePost(this.state.title, this.state.content)
 	}
 
@@ -62,8 +63,8 @@ class EditContainer extends Component {
 			post
 		} = nextProps
 		this.state = {
-			title: post.title,
-			content: post.content
+			title: '',
+			content: ''
 		}
 		if (post && post.status === 'create_success') hashHistory.push(`/home`)
 	}
@@ -78,6 +79,7 @@ class EditContainer extends Component {
 		const {
 			post
 		} = self.props
+		const footerActionEnabled = this.state.title.length > 0 && this.state.content.length > 0
 		let renderStatus = {
 			loading: function() {
 				return <Spinner />
@@ -93,7 +95,7 @@ class EditContainer extends Component {
 				<hr/>
 				<EditContent content={this.state.content} handleContentChange={this.handleContentChange.bind(this)} />
 				<hr/>
-				<EditFooter handleCreatePost={this.handleCreatePost.bind(this)}/>		
+				<EditFooter handleCreatePost={this.handleCreatePost.bind(this)} actionEnabled={footerActionEnabled} />		
 			</div>
 		)
 	}
@@ -112,8 +114,8 @@ const mapDispatchToProps = (dispatch) => {
 	}, dispatch)
 }
 
-EditContainer.propTypes = {
+CreateContainer.propTypes = {
 
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(EditContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(CreateContainer)

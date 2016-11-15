@@ -34,6 +34,10 @@ class EditContainer extends Component {
 
 	constructor(props) {
 		super(props)
+		this.state = {
+			title: '',
+			content: ''
+		}
 	}
 
 	handleContentChange(content) {
@@ -79,6 +83,7 @@ class EditContainer extends Component {
 		const {
 			post
 		} = self.props
+		const footerActionEnabled = this.state.title.length > 0 && this.state.content.length > 0
 		let renderStatus = {
 			loading: function() {
 				return <Spinner />
@@ -90,7 +95,7 @@ class EditContainer extends Component {
 						<hr/>
 						<EditContent content={post.content} handleContentChange={self.handleContentChange.bind(self)} />
 						<hr/>
-						<EditFooter handleUpdatePost={self.handleUpdatePost.bind(self)} />
+						<EditFooter handleUpdatePost={self.handleUpdatePost.bind(self)} actionEnabled={footerActionEnabled} />
 					</div>
 				)
 			},

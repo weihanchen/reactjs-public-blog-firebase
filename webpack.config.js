@@ -46,7 +46,10 @@ module.exports = {
 			test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
 			loader: "url-loader?limit=10000&mimetype=image/svg+xml"
 		}],
-		noParse: /node_modules\/quill\/dist/
+		noParse: [
+			path.resolve('node_modules/react-quill/node_modules/quill/dist/quill.js'), //npm 2
+			path.resolve('node_modules/quill/dist/quill.js') //npm 3
+		]
 	},
 	plugins: [
 		new webpack.optimize.UglifyJsPlugin({

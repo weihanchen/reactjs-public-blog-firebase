@@ -47,7 +47,7 @@
 	 	|-Posts
 	 	|-SearchBar
 	 	|-Spinner
-	 |-containers - connect with redux's store and dispatch actions
+	 |-containers - connect with redux\'s store and dispatch actions
 	 	|-pages
 	 		|-CreateContainer.js
 	 		|-DetailContainer.js
@@ -72,9 +72,8 @@
 ![Dataflow](./images/Dataflow.png)
 
 ## Design Step ##
-
->1.Components -> Actions -> Sagas -> Reducers -> Containers
->2.configureStore: Connect with reducers and sagas 
+>1. Components -> Actions -> Sagas -> Reducers -> Containers
+>2. configureStore: Connect with reducers and sagas 
 
 ## Todo ##
 >1. add some test

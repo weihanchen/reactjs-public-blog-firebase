@@ -62,7 +62,7 @@
 	 |-client.js
 	 |-routers.js
 	public - running application folder
-```javascript
+```
 ## Components ##
 
 ![App](./images/Components.png)

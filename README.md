@@ -32,7 +32,6 @@
 * [React-Quill ](https://github.com/zenoamaro/react-quill)
 
 ## File Structure ##
-```javascript
 	app - reactjs source code
 	 |-actions
 	 |-api - firebase services
@@ -62,7 +61,7 @@
 	 |-client.js
 	 |-routers.js
 	public - running application folder
-```
+
 ## Components ##
 
 ![App](./images/Components.png)

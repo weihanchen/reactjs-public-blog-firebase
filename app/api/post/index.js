@@ -7,4 +7,4 @@ export class Post {
 	}
 }
 
-export default new Post();
+export default new Post()

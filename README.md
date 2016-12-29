@@ -6,8 +6,8 @@
 
 
 ## Requirement ##
-* [Nodejs](https://nodejs.org/en/)
-* [NPM](https://www.npmjs.com/) - A package manager for build environment
+* [Nodejs 7.0.0+](https://nodejs.org/en/)
+* [NPM 3.10.8+](https://www.npmjs.com/) - A package manager for build environment
 
 ## Quick Start ##
 * git clone https://github.com/weihanchen/reactjs-public-blog-firebase.git
@@ -72,7 +72,7 @@
 
 ## Design Step ##
 >1. Components -> Actions -> Sagas -> Reducers -> Containers
->2. configureStore: Connect with reducers and sagas 
+>2. configureStore: Connect with reducers and sagas
 
 ## Todo ##
 >1. add some test

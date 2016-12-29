@@ -18,7 +18,7 @@ import store from './store/configureStore'
 /* Stylesheets*/
 import 'bootstrap-sass/assets/stylesheets/_bootstrap.scss'
 import 'font-awesome/scss/font-awesome.scss'
-import 'react-quill/node_modules/quill/dist/quill.snow.css'
+import 'quill/dist/quill.snow.css'
 import './stylesheets/style.scss'
 
 

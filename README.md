@@ -15,7 +15,7 @@
 * npm install
 * npm run dev - development
 * npm run build - build to public/bundle.js
-* node run.js - run with express
+* npm start - build and run
 
 ## Stack ##
 >1. [React](https://facebook.github.io/react/)

@@ -37,6 +37,7 @@
         "url-loader": "~0.5.7"
     },
     "scripts": {
+	"start": "npm run build && node run.js",
         "build": "webpack",
         "dev": "webpack-dev-server --inline --devtool eval --progress --colors --hot --content-base public",
         "gulp": "gulp"
